@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "python-design-pattern"
+version = "1.0.0"
+description = "Learning Materials for Odject Oriented Programming"
+authors = ["YutoKobayashi <y.kobayashi@neoai.jp>"]
+readme = "README.md"
+packages = [{include = "python-design-pattern"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+python-dotenv = "^1.0.0"
+typing-extensions = "^4.7.1"
+ipykernel = "^6.25.2"
+flake8 = "^6.1.0"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.4.1"
+black = "^23.10.1"
+isort = "^5.12.0"
+pyproject-flake8 = "^6.0.0.post1"
+jupyter-client = "^8.3.0"
+jupyter = "^1.0.0"
+ipykernel = "^6.25.0"
+pytest = "^7.4.0"
+pre-commit = "^3.3.3"
+flake8 = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 119
+exclude = '.venv|.git|__pycache__'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.flake8]
+max-line-length = 119
+extend-ignore = ["E203", "W503"]
+exclude = '.venv|.git|__pycache__'
+max-complexity = 10
+
+[tool.mypy]
+show_error_context = true
+show_column_numbers = true
+ignore_missing_imports = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+warn_return_any = true
+warn_unused_ignores = true
+warn_redundant_casts = true
