@@ -7,15 +7,15 @@ class Vehicle(metaclass=ABCMeta):
         self.color = color
 
     @abstractmethod
-    def start(self):
+    def start(self) -> None:
         pass
 
     @abstractmethod
-    def stop(self):
+    def stop(self) -> None:
         pass
 
     @abstractmethod
-    def fly(self):
+    def fly(self) -> None:
         pass
 
 
@@ -23,13 +23,13 @@ class Airplane(Vehicle):
     def __init__(self, name: str, color: str):
         super().__init__(name, color)
 
-    def start(self):
+    def start(self) -> None:
         print("start!")
 
-    def stop(self):
+    def stop(self) -> None:
         print("stop!")
 
-    def fly(self):
+    def fly(self) -> None:
         print("fly!")
 
 
@@ -37,13 +37,13 @@ class Car(Vehicle):
     def __init__(self, name: str, color: str):
         super().__init__(name, color)
 
-    def start(self):
+    def start(self) -> None:
         print("start!")
 
-    def stop(self):
+    def stop(self) -> None:
         print("stop!")
 
-    def fly(self):
+    def fly(self) -> None:
         raise Exception("Car can't fly!")
 
 

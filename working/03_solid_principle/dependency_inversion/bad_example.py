@@ -3,7 +3,7 @@ class User:
 
 
 class UserController:
-    def __init__(self):
+    def __init__(self) -> None:
         self.__user_service = UserService()
 
     def create(self, user: User) -> User:
@@ -14,7 +14,7 @@ class UserController:
 
 
 class UserService:
-    def __init__(self):
+    def __init__(self) -> None:
         self.__user_repository = UserRdbRepository()
 
     def create(self, user: User) -> User:
