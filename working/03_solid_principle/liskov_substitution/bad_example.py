@@ -1,6 +1,6 @@
 # スーパータイプ
 class Rectangle:
-    def __init__(self):
+    def __init__(self) -> None:
         self._width = 0
         self._height = 0
 
@@ -9,7 +9,7 @@ class Rectangle:
         return self._width
 
     @width.setter
-    def width(self, width: int):
+    def width(self, width: int) -> None:
         self._width = width
 
     @property
@@ -17,7 +17,7 @@ class Rectangle:
         return self._height
 
     @height.setter
-    def height(self, height: int):
+    def height(self, height: int) -> None:
         self._height = height
 
     def get_area(self) -> int:
@@ -31,7 +31,7 @@ class Square(Rectangle):
         return super().width
 
     @width.setter
-    def width(self, width: int):
+    def width(self, width: int) -> None:
         self._width = width
         self._height = width
 
@@ -40,7 +40,7 @@ class Square(Rectangle):
         return super().height
 
     @height.setter
-    def height(self, height: int):
+    def height(self, height: int) -> None:
         self._width = height
         self._height = height
 
